@@ -5,6 +5,11 @@
 {% block content %}
 
 <div class="container">
+
+    <div style="float: right;">
+    <p style="color: white;">texto prueba</p>
+    </div>
+
     <div class="row">
         {% for producto in productos %}
         <div class="col-md-3" >
@@ -13,6 +18,9 @@
                 <div class="card-body" style="text-align: center;">
                     <h7 class="card-title">{{producto.nombre}}</h7>
                     <p class="card-text">U$ &nbsp;{{producto.precio}}</p>
+                </div>
+                <div style="background-color: green;" >
+                    <a href="#" class="btn btn-su" style="color:white ; width: 100%;">Agregar</a>
                 </div>
             </div>
         </div>
