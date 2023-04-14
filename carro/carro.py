@@ -5,8 +5,8 @@ class Carro:
         carro=self.session.get("carro")
         if not carro:
             carro=self.session["carro"]={}
-        else:
-            self.carro=carro
+
+        self.carro=carro
     #52
     def agregar(self, producto):
         if(str(producto.id) not in self.carro.key()):

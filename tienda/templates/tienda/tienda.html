@@ -5,9 +5,9 @@
 {% block content %}
 
 <div class="container">
-
     <div style="float: right;">
-        <p style="color: white;">total{{importe_total_carro}}</p>
+
+        {% include "carro/widget.html" %}
     </div>
 
     <div class="row">
@@ -20,7 +20,7 @@
                     <p class="card-text">U$ &nbsp;{{producto.precio}}</p>
                 </div>
                 <div style="background-color: green;" >
-                    <a href="#" class="btn btn-su" style="color:white ; width: 100%;">Agregar</a>
+                    <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-su" style="color:white ; width: 100%;">Agregar</a>
                 </div>
             </div>
         </div>
