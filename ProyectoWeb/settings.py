@@ -9,22 +9,19 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-import os
 import environ
+import os
 
 from django.contrib.messages import constants as mensajes_de_error
 from pathlib import Path
 
-
 env = environ.Env()
-environ.Env.read_env()
 
-#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -147,12 +144,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Configuracion de email.
 
-EMAIL_BACKEND=env('EMAIL_BACKEND')
-EMAIL_HOST=env('EMAIL_HOST')
-EMAIL_USE_TLS=env.bool('EMAIL_USE_TLS', default='True')
-EMAIL_PORT=env('EMAIL_PORT', default='587')
-EMAIL_HOST_USER=env.str('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD=env.str('EMAIL_HOST_PASSWORD')
+EMAIL_BACKEND = env('EMAIL_BACKEND')
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_USE_TLS = env.bool('EMAIL_USE_TLS', default='True')
+EMAIL_PORT = env('EMAIL_PORT', default='587')
+EMAIL_HOST_USER = env.str('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env.str('EMAIL_HOST_PASSWORD')
 
 CRISPY_TEMPLATE_PACK='bootstrap4'
 
