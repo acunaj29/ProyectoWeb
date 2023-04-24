@@ -151,9 +151,9 @@ EMAIL_PORT = env('EMAIL_PORT', default='587')
 EMAIL_HOST_USER = env.str('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env.str('EMAIL_HOST_PASSWORD')
 
-CRISPY_TEMPLATE_PACK='bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-MESSAGE_TAGS={
+MESSAGE_TAGS = {
     mensajes_de_error.DEBUG: 'debug',
     mensajes_de_error.INFO: 'info',
     mensajes_de_error.SUCCESS: 'success',
